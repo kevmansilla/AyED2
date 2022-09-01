@@ -1,0 +1,11 @@
+*~
+_*
+*.o
+*.d
+.gdbinit
+.Rhistory
+.vscode
+out
+solve-hanoi
+reader
+sorter
