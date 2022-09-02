@@ -54,8 +54,8 @@ int array_peak_sequential(int a[], int length){
   for (int i = 0; i < length; i++)
   {
          if (a[i] > max){
-			  max = a[i];
-		      peak = i;
+              max = a[i];
+              peak = i;
         }
   }
 

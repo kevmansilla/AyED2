@@ -12,7 +12,6 @@ counter init(void) {
     counter c = (counter)malloc(sizeof(struct _counter));
     assert(c != NULL);
     c -> count = 0;
-    
     return c;
 }
 
@@ -27,13 +26,12 @@ bool is_init(counter c) {
 void dec(counter c) {
 
     assert(!(is_init(c)));
-        c -> count--;
+     c -> count--;
 }
 
 counter copy_counter(counter c) { //NI SIQUIERA LA USA, EL PROBLEMA NO ES ACA
     counter copy = NULL;
     copy->count=c->count;
-
     return copy;
 }
 

@@ -12,13 +12,9 @@ static void quick_sort_rec(int a[], unsigned int lft, unsigned int rgt) {
 
    int ppiv=0;
    
-   if(lft < rgt)
-   {
-       
+   if(lft < rgt) {
        ppiv=partition(a,lft,rgt);
-
-       if(ppiv==0) // 0u es el literal de los sin signo
-       {
+       if(ppiv==0) { // 0u es el literal de los sin signo
         quick_sort_rec(a,lft,ppiv);
        } else {
         quick_sort_rec(a,lft,ppiv-1);

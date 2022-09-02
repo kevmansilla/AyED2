@@ -11,7 +11,7 @@ struct _s_string {
 string string_create(const char *word) {
     string str = NULL;
     str = calloc(1, sizeof(struct _s_string));
-    str->length =  strlen(word);
+    str->length = strlen(word);
     str->content = calloc(str->length + 1u, sizeof(char));
     str->content = strncpy(str->content, word, str->length + 1u);
 

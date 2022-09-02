@@ -25,8 +25,8 @@ void array_from_file(int a[YEARS][MONTHS][DAYS][PHYS_QTTYS], const char *filepat
     FILE *file = NULL;
     file = fopen(filepath, "r");
     if (file == NULL) {
-	fprintf(stderr, "File does not exist.\n");
-	exit(EXIT_FAILURE);
+    fprintf(stderr, "File does not exist.\n");
+    exit(EXIT_FAILURE);
     }
     unsigned int k_year = 0u;
     unsigned int k_month = 0u;
@@ -39,7 +39,7 @@ void array_from_file(int a[YEARS][MONTHS][DAYS][PHYS_QTTYS], const char *filepat
     int k_precip = 0;
     while (!feof(file)) {
         int res = fscanf(file, " %u %u %u %d %d %d %d %d %d ", &k_year, &k_month, &k_day, &k_temp, &k_temp_M, &k_temp_m, &k_press, &k_moist, &k_precip);
-	if (res != 9) {
+    if (res != 9) {
             fprintf(stderr, "Invalid array.\n");
             exit(EXIT_FAILURE);
         }

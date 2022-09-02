@@ -50,11 +50,9 @@ void max_precip_months( int a[YEARS][MONTHS][DAYS][PHYS_QTTYS]) {
         int max_precip = 0;
 
         for (t_month month = january; month <= december; ++month) {
-            
             int sum_precip = 0;
 
             for (unsigned int day = 0u; day < DAYS; ++day) {
-
                 sum_precip += a[year][month][day][precip];
             } 
 
@@ -62,7 +60,7 @@ void max_precip_months( int a[YEARS][MONTHS][DAYS][PHYS_QTTYS]) {
                 max_precip = sum_precip;
                 m_month = month;
             }
-        }  
+        }
       printf("\nYear %u, month of max precip %d\n",year+1980u,m_month+1); //start counting at 0
     }
     printf("\n\n");

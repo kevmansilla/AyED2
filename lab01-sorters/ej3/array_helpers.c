@@ -45,8 +45,8 @@ bool array_is_permutation_of(int a[], int b[], unsigned int length) {
 }
 
 unsigned int array_from_file(int array[],
-			     unsigned int max_size,
-			     const char *filepath) {
+                 unsigned int max_size,
+                 const char *filepath) {
     FILE *file = NULL;
     file = fopen(filepath, "r");
     if (file == NULL) {

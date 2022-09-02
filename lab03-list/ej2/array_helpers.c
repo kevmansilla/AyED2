@@ -38,7 +38,7 @@ unsigned int array_from_file(int array[], unsigned int max_size, const char *fil
             fprintf(stderr, "Invalid array.\n");
             exit(EXIT_FAILURE);
         }
-	   ++i;
+       ++i;
     }
     fclose(file);
     return (size);

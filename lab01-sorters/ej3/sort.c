@@ -16,16 +16,12 @@ static unsigned int partition(int a[], unsigned int lft, unsigned int rgt) {
    unsigned int ppiv = lft;
    unsigned int j = rgt;
    unsigned int i = (lft + 1);
-    while (i <= j)
-    {
-        if (goes_before(a[i],a[ppiv]))
-        {
+    while (i <= j) {
+        if (goes_before(a[i],a[ppiv])) {
             i++;
-        } else if (goes_before(a[ppiv],a[j]))
-        {
+        } else if (goes_before(a[ppiv],a[j])) {
             j--;
-        } else  //  if (goes_before(a[ppiv],a[i]) && goes_before(a[j],a[ppiv]))
-        {
+        } else { //  if (goes_before(a[ppiv],a[i]) && goes_before(a[j],a[ppiv]))
             swap(a,i,j);
             i++;
             j--;
@@ -35,33 +31,20 @@ static unsigned int partition(int a[], unsigned int lft, unsigned int rgt) {
     ppiv=j;
 
     return(ppiv); 
-
-
 }
-    
 
-
-
- 
 static void quick_sort_rec(int a[], unsigned int lft, unsigned int rgt) {
 
-   int ppiv=0;
-   
-   if(lft < rgt)
-   {
-       
-       ppiv=partition(a,lft,rgt);
-
-       if(ppiv==0) // 0u es el literal de los sin signo
-       {
-        quick_sort_rec(a,lft,ppiv);
-       } else {
-        quick_sort_rec(a,lft,ppiv-1);
-       }
-       quick_sort_rec(a,ppiv+1,rgt);
-
+    int ppiv=0;
+    if(lft < rgt) {
+        ppiv=partition(a,lft,rgt);
+        if(ppiv==0) {// 0u es el literal de los sin signo
+            quick_sort_rec(a,lft,ppiv);
+        } else {
+            quick_sort_rec(a,lft,ppiv-1);
+        }
+        quick_sort_rec(a,ppiv+1,rgt);
    }
-
 }
 
 void quick_sort(int a[], unsigned int length) {

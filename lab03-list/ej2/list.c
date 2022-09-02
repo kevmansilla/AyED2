@@ -5,8 +5,7 @@
 #include "list.h"
 
 
-struct Node
-{
+struct Node {
     type_elem elem; //Value that the structure will have in each element, in this case is an integer number
     struct Node* next; //Pointer to the next node
 };
@@ -14,9 +13,8 @@ struct Node
 
 //CONSTRUCTORS
 
-list empty(void){ 
+list empty(void){
     list l = NULL;
-
     return l;
 }
 

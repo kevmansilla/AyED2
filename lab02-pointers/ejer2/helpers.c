@@ -12,9 +12,9 @@ void array_copy(player_t copy[], player_t array[], unsigned int length) {
 static unsigned int array_value_count(player_t a[], unsigned int length, player_t value) {
     unsigned int count = 0;
     for (unsigned int i = 0; i < length; i++) {
-	if (a[i].name == value.name) {
-	    count++;
-	}
+    if (a[i].name == value.name) {
+        count++;
+    }
     }
     return (count);
 }
@@ -23,10 +23,10 @@ bool array_is_permutation_of(player_t a[], player_t b[], unsigned int length) {
     unsigned int i = 0;
     bool result = true;
     while (i < length && result) {
-	unsigned int a_count = array_value_count(a, length, a[i]);
-	unsigned int b_count = array_value_count(b, length, a[i]);
-	result = (a_count == b_count);
-	i++;
+    unsigned int a_count = array_value_count(a, length, a[i]);
+    unsigned int b_count = array_value_count(b, length, a[i]);
+    result = (a_count == b_count);
+    i++;
     }
     return (result);
 }
@@ -85,8 +85,8 @@ unsigned int process_file(const char *filepath, player_t atp[]) {
     FILE *file = NULL;
     file = fopen(filepath, "r");
     if (file == NULL) {
-	fprintf(stderr, "File does not exist.\n");
-	exit(EXIT_FAILURE);
+    fprintf(stderr, "File does not exist.\n");
+    exit(EXIT_FAILURE);
     }
     size = process_FILE(file, atp);
     fclose(file);

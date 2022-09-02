@@ -33,7 +33,6 @@ char *parse_filepath(int argc, char *argv[]) {
 
 
 float average(list l) {
-    
     if (length(l) == 0){
         return 0;
     } else{
